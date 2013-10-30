@@ -22,7 +22,7 @@ def get_sliding_regions(mask,wnd_width,slide_by, sunk_based=False):
         if "random" in chr: continue
         print chr 
         if sunk_based:
-            curr_mask = mask['isntSunkOrIsMasked'][chr][start:end]
+            curr_mask = mask['isntSunkOrIsMasked'][chr][:]
         else:
             curr_mask = mask['mask'][chr][:,:].sum(1)>0
         chr_wnd_bnds,max_wnd = getBoundsForEqualWeightedWindows(curr_mask,0,l,slide_by)
