@@ -1,0 +1,12 @@
+SCRIPTS TO MAKE WINDOWed SUMMARY FILES
+
+the information on contigutous windows of a certian size flor a certain genome with cdertain masking is in 
+
+./windows and is generated with do_generate_window_files
+
+
+do_generate_DTS_windowed_ests.sh to make summary files, 
+
+ie, for every window there is a predicted copy
+
+these take as imput the window files genated above
