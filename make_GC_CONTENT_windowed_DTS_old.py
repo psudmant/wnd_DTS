@@ -38,14 +38,14 @@ if __name__=='__main__':
 	regions_chrms,regions_coords,regions_wnds = cPickle.load(F_region_pickle) 
 
 	GC_content = DenseTrackSet(o.fn_contigs,
-													o.fn_gc_track,
-													overwrite=False,
-													openMode = 'r')
+                                            o.fn_gc_track,
+                                            overwrite=False,
+                                            openMode = 'r')
 
 	out_GC_wnd_DTS = DenseTrackSet(o.fn_wnd_contig_file,
-															"%s"%(o.outfile),
-															overwrite=True,
-															openMode='w')
+                                                        "%s"%(o.outfile),
+                                                        overwrite=True,
+                                                        openMode='w')
 	
 	out_GC_wnd_DTS.addGroup("GC")
 	out_GC_wnd_DTS.addGroup("starts")

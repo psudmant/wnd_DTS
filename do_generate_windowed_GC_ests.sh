@@ -14,11 +14,10 @@ outfile_prefix=HG19_slide
 #gc_track=/net/eichler/vol7/home/psudmant/genomes/GC_tracks/hg18-gc-w200.GC_content
 #outfile_prefix=HG18_
 
-
 for p in `ls $wnd_pickle_dir/*.pkl`  
 do
 	wnd_pickle=$p
 	wnd_contig_file=$p.contigs
 	wnd_width=`echo $wnd_pickle | awk -F "/" '{print $(NF)}' | awk -F _ '{print $1}'`
-	echo python make_GC_CONTENT_windowed_DTS.py --contig_file $contigs --outfile  $outdir/${outfile_prefix}${wnd_width}_bp.GC_content --wnd_pickle $wnd_pickle --wnd_contig_file $wnd_contig_file --wnd_width $wnd_width    --gc_track $gc_track
+	echo python make_GC_CONTENT_windowed_DTS.py --contig_file $contigs --outfile  $outdir/${outfile_prefix}${wnd_width}_bp.GC_content --wnd_pickle $wnd_pickle --wnd_contig_file $wnd_contig_file --wnd_width $wnd_width  --gc_track $gc_track
 done
