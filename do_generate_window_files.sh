@@ -1,10 +1,10 @@
 
 ########
-contigs=/net/eichler/vol7/home/psudmant/genomes/contigs/hg19_contigs.txt
-mask=/net/eichler/vol7/home/psudmant/genomes/mask_tracks/HG19-noWM-pad36
+contigs=/net/eichler/vol7/home/psudmant/genomes/contigs/gorGor3.1.75.contigs
+mask=/net/eichler/vol7/home/psudmant/genomes/mask_tracks/gorGor3.1_pad36
 #
 wnd_width=500
-windows_out=./windows/hg19_slide/500_bp_windows_2.pkl
+windows_out=./windows/gorGor3.1_slide/500_bp_windows.pkl
 #echo python generate_window_files.py --contig_file $contigs --mask_file $mask --region_output $windows_out --wnd_width $wnd_width
 echo python generate_window_files.py --contig_file $contigs --mask_file $mask --region_output $windows_out --wnd_width $wnd_width --slide_by 100
 ##option now --sunk_based (the mask is a sunk mask)
