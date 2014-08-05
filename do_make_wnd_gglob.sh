@@ -28,6 +28,8 @@ gglob_dir=/net/eichler/vol19/projects/human_population_sequencing/nobackups/psud
 wnd_slide=100
 wnd_size=500
 
+CURRENT_DIR=`pwd`
+
 ##setup
 if [ "$1" == "setup" ]
 then
@@ -35,7 +37,7 @@ then
 else
     for chr in `cat $wnd_contigs | awk '{print $1}'`
     do
-        echo which python';' source ~psudmant/.bash_profile ';' which python ';' python ~psudmant/EEE_Lab/projects/common_code/ssf_DTS_caller/gglob.py  --contigs $wnd_contigs --in_DTS_dir $in_dir --gglob_dir $gglob_dir --wnd_size $wnd_size --wnd_slide $wnd_slide --sunk_contigs $sunk_wnd_contigs --in_sunk_DTS_dir $sunk_in_dir --setup_chr $chr
+        echo which python';' source $CURRENT_DIR/config.sh ';' which python ';' python ~psudmant/EEE_Lab/projects/common_code/ssf_DTS_caller/gglob.py  --contigs $wnd_contigs --in_DTS_dir $in_dir --gglob_dir $gglob_dir --wnd_size $wnd_size --wnd_slide $wnd_slide --sunk_contigs $sunk_wnd_contigs --in_sunk_DTS_dir $sunk_in_dir --setup_chr $chr
     done
 fi
 
